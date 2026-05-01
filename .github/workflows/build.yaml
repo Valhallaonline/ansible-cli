@@ -27,10 +27,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build image
-        run: docker build . -t ghcr.io/Valhallaonline/ansible-cli:${{ github.ref_name }}
+        run: docker build . -t ghcr.io/valhallaonline/ansible-cli:${{ github.ref_name }}
 
       - name: Push image to github registry
-        run: docker push ghcr.io/Valhallaonline/ansible-cli:${{ github.ref_name }}
+        run: docker push ghcr.io/valhallaonline/ansible-cli:${{ github.ref_name }}
 
       - name: Create GitHub Release with Auto-Generated Notes
         uses: ncipollo/release-action@v1
