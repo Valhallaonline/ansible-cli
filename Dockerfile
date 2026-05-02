@@ -1,5 +1,9 @@
 FROM python:3.14.4-alpine3.22
 
+LABEL author='Gareth Jones (gaz@valhallaonline.info)' maintainer="valhallaonline"
+
+LABEL org.opencontainer.image.source="https://github.com/Valhallaonline/ansible-cli"
+
 # GCC is needed for some python dependacies to work
 RUN apk add gcc
 
