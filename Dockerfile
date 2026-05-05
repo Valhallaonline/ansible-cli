@@ -5,7 +5,7 @@ LABEL author='Gareth Jones (gaz@valhallaonline.info)' maintainer="valhallaonline
 LABEL org.opencontainer.image.source="https://github.com/Valhallaonline/ansible-cli"
 
 # GCC is needed for some python dependacies to work
-RUN apk add gcc openssh-client
+RUN apk --no-cache add gcc openssh-client
 
 # Alpine forces python packages to be installed into a venv if using pip
 RUN python3 -m venv /venv
